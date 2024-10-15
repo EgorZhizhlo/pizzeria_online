@@ -1,0 +1,27 @@
+{% load static %}
+
+<div class="col-6 col-md-4 my-1">
+  <a class="card text-decoration-none text-dark" href="{% url 'pizza:pizza_detail' pizza.id %}">
+    <div class="card">
+      <img 
+        class="img-fluid card-img-top" 
+        height="400" width="300"
+        src="{% static "img/image-" %}{{ pizza.title|lower }}.png"
+      >
+      <div class="card-body">           
+        <h5 class="card-title">{{ pizza.title }} </h5>
+        <span>
+          {% for category in pizza.category.all %}
+            <p class="badge bg-info"> {{ category }}</p>
+          {% endfor%}
+        </span>
+        <p class="card-text">{{ pizza.description|truncatechars:40 }}</p>
+        <p class="card-text">{{ pizza.structure }}</p>
+        <p class="card-text">{{ pizza.size }}см</p>
+        <div>
+          <h2><span class="badge bg-secondary">{{ pizza.price }} ₽</span></h2>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>  

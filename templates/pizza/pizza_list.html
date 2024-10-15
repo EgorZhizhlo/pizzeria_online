@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Pizzeria Online. Список пицц
+{% endblock %}
+{% block content %}
+  <h1 class="pb-2 mb-0">Каталог пицц</h1>
+  <div class="row">
+    {% for pizza in pizza_list %}
+      {% include "includes/pizza_card.html" %}
+    {% endfor %}
+  </div>
+{% endblock %}

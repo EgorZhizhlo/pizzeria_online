@@ -1,0 +1,66 @@
+# Игнорировать каталоги виртуальных окружений
+venv/
+ENV/
+env/
+.venv/
+
+# Игнорировать временные файлы Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Игнорировать дампы и кэши
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Игнорировать файлы окружения
+.env
+.env.*
+
+# Игнорировать логи
+*.log
+*.log.*
+
+# Игнорировать тестовые отчеты
+.tox/
+.nox/
+coverage.*
+*.cover
+.cache/
+
+# Игнорировать файлы конфигурации pip и setuptools
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Игнорировать директории сборки
+build/
+dist/
+*.egg-info/
+.eggs/
+wheelhouse/
+*.egg
+*.manifest
+*.spec
+
+# Игнорировать файлы с данными
+*.sqlite3
+*.db
+
+# Игнорировать конфигурацию IDE и редакторов
+.idea/
+.vscode/
+*.iml
+
+# Игнорировать файлы Docker
+*.dockerignore
+Dockerfile
+
+# Игнорировать файлы Jupyter Notebook
+.ipynb_checkpoints/
+
+# Игнорировать временные файлы ОС
+.DS_Store
+Thumbs.db

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Pizzeria Online. Пицца {{ pizza.title|lower }}
+{% endblock %}
+{% block content %}
+  <h1 class="pb-2 mb-0">{{ pizza.title }}</h1>  
+  <div class="row mt-3">
+    <div class="col-12 col-md-6">
+      <h4>
+        {% for category in pizza.category.all %}
+          <span class="badge bg-info"> {{ category }}</span>
+        {% endfor%}
+      </h4>
+      <h2 class="text-secondary">Описание</h2>
+      <p>{{ pizza.description }}</p>
+      <h4 class="text-secondary">Состав</h4>
+      <p>{{ pizza.structure }}</p>
+      <h4 class="text-secondary">Размер</h4>
+      <p>{{ pizza.size }}см</p>  
+        <div>
+          <h1><span class="badge bg-secondary">{{ pizza.price }} ₽</span></h1>
+        </div>
+    </div> 
+    <div class="col-12 col-md-6 mb-3">
+      <img 
+        class="img-fluid" 
+        height="400" width="300"
+        src="{% static "img/image-" %}{{ pizza.title|lower }}.png"
+        >      
+    </div>
+  </div>     
+{% endblock %}
