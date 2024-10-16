@@ -43,6 +43,10 @@
         </ul>
         {% endwith %}
       </div> 
+      <form class="d-flex me-4">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Поиск</button>
+      </form>
       <a class="navbar-brand" href="{% url 'homepage:home' %}">
         <img src="{% static 'img/user.png' %}" height="50" class="d-inline-block align-top" alt="">           
       </a>         
