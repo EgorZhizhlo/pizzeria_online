@@ -12,4 +12,4 @@
 
 
 # Детализация
-![image](https://github.com/user-attachments/assets/a9c49603-f4f8-4e20-9d40-a48d1b1b7678)
+![image](https://github.com/user-attachments/assets/4eef46bf-1878-4703-8ad5-1371b2c8b009)
