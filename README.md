@@ -4,12 +4,22 @@
 
 # База данных
 Таблица Pizza: 
-    * is_published(По стандарту: True) - параметр публикации на сайте
-    * 
+    - is_published(По стандарту: True) - параметр публикации в Каталоге 
+    - is_on_main(По стандарту: False) - параметр публикации на Главной странице
+    - title(Макс. длинна: 256) - название пиццы
+    - description
+    - structure
+    - size
+    - output_order(По стандарту: 1000) - параметр порядка отображения на сайте(чем меньше, тем выше в категории
+    - price
+    - category
+    
+    
 
 
 # Главная страница
-![image](https://github.com/user-attachments/assets/5523cde4-f7d2-4f43-8703-ac10298dcd02)
+![image](https://github.com/user-attachments/assets/88c20f5b-78a2-4c3b-82ac-a8c9ad1c1741)
+
 
 
 # Каталог 
