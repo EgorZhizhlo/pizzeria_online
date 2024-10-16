@@ -3,7 +3,7 @@
 ### Проект в разработке!!!
 
 # Главная страница
-![image](image.png)
+![image](https://github.com/user-attachments/assets/3d4c65a5-08c2-4fe9-a280-a6f604708cfe)
 
 # Каталог 
 ![image](https://github.com/user-attachments/assets/c32dd489-c615-4bb7-b1ef-b07d98fd7484)
