@@ -9,7 +9,8 @@
 
 
 # Главная страница
-![image](image.png)
+![image](https://github.com/user-attachments/assets/5523cde4-f7d2-4f43-8703-ac10298dcd02)
+
 
 # Каталог 
 ![image](https://github.com/user-attachments/assets/7f5c25d4-28e7-46e1-a021-eb2082a62895)
