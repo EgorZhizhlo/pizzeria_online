@@ -12,11 +12,18 @@ def home(request):
             is_on_main=True,
             is_published=True,
         )
+        .order_by(
+            'output_order',
+            'title',
+        )
         .prefetch_related(
             Prefetch(
                 'category',
                 queryset=Category.objects.filter(
                         is_published=True
+                    ).order_by(
+                        'output_order',
+                        'title',
                     )
             )
         )

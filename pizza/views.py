@@ -15,12 +15,19 @@ def pizza_list(request):
             Q(category__title__icontains=search_query),
             is_published=True,
         )
+        .order_by(
+            'output_order',
+            'title',
+        )
         .distinct()
         .prefetch_related(
             Prefetch(
                 'category',
                 queryset=Category.objects.filter(
                     is_published=True,
+                ).order_by(
+                    'output_order',
+                    'title',
                 )
             )
         )
@@ -39,11 +46,15 @@ def pizza_detail(request, pk):
         Pizza.objects
         .filter(
             is_published=True,
-        ).prefetch_related(
+        )
+        .prefetch_related(
             Prefetch(
                 'category',
                 queryset=Category.objects.filter(
                         is_published=True
+                    ).order_by(
+                        'output_order',
+                        'title',
                     )
             )
         ),
