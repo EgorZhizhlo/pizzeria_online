@@ -13,6 +13,7 @@
         >
         <span class="navbar-toggler-icon"></span>
       </div>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         {% with request.resolver_match.view_name as view_name %}            
         <ul class="nav nav-pills">
@@ -43,13 +44,16 @@
         </ul>
         {% endwith %}
       </div> 
+
       <form class="d-flex me-4" method="GET" action="{% url 'pizza:pizza_list' %}">
         <input class="form-control me-2" type="search" name="search" placeholder="Поиск" aria-label="Search">
         <button class="btn btn-outline-primary" type="submit">Поиск</button>
       </form>
-      <a class="navbar-brand" href="{% url 'homepage:home' %}">
+
+      <a class="navbar-brand" href="" data-toggle="modal" data-target="#UserAccountModal">
         <img src="{% static 'img/user/user-login.png' %}" height="50" class="d-inline-block align-top" alt="">           
-      </a>         
+      </a>  
+
     </div>
   </nav>
 </header>
