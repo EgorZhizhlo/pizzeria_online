@@ -27,15 +27,15 @@
     output_order(PositiveSmallIntegerField, default=1000) - Параметр ранжировки отображения категорий
 
 # Главная страница
-    ![image](https://github.com/user-attachments/assets/88c20f5b-78a2-4c3b-82ac-a8c9ad1c1741)
+![image](https://github.com/user-attachments/assets/88c20f5b-78a2-4c3b-82ac-a8c9ad1c1741)
 
 
 # Каталог 
-    ![image](https://github.com/user-attachments/assets/c0a651fa-e18d-4dcb-b7f5-de521d7246b5)
+![image](https://github.com/user-attachments/assets/c0a651fa-e18d-4dcb-b7f5-de521d7246b5)
 
 
 # Детализация
-    ![image](https://github.com/user-attachments/assets/3bd645c4-bebb-4d2a-8c07-40e03263a4ec)
+![image](https://github.com/user-attachments/assets/3bd645c4-bebb-4d2a-8c07-40e03263a4ec)
 
 
 # Поиск пицц
