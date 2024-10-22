@@ -4,30 +4,37 @@
   Pizzeria Online. Пицца {{ pizza.title|lower }}
 {% endblock %}
 {% block content %}
-  <h1 class="pb-2 mb-0">{{ pizza.title }}</h1>  
-  <div class="row mt-3">
-    <div class="col-12 col-md-6">
-      <h4>
-        {% for category in pizza.category.all %}
-          <span class="badge bg-info"> {{ category }}</span>
-        {% endfor%}
-      </h4>
-      <h2 class="text-secondary">Описание</h2>
-      <p>{{ pizza.description }}</p>
-      <h4 class="text-secondary">Состав</h4>
-      <p>{{ pizza.structure }}</p>
-      <h4 class="text-secondary">Размер</h4>
-      <p>{{ pizza.size }}см</p>  
-        <div>
-          <h1><span class="badge bg-secondary">{{ pizza.price }} ₽</span></h1>
-        </div>
-    </div> 
-    <div class="col-12 col-md-6 mb-3">
-      <img 
-        class="img-fluid" 
-        height="400" width="300"
-        src="{% static "img/pizza/image-" %}{{ pizza.title|lower }}.png"
-        >      
-    </div>
-  </div>   
+<div class="container mt-5">
+    <div class="row mt-3">
+      <h1 class="pb-2 mb-0">{{ pizza.title }}</h1>  
+      <div class="col-12 col-md-6">
+        <h4>
+          {% for category in pizza.category.all %}
+            <span class="badge bg-info"> {{ category }}</span>
+          {% endfor%}
+        </h4>
+        <h2 class="text-dark">Описание</h2>
+        <h5 class="text-secondary">{{ pizza.description }}</h5>
+        <h4 class="text-dark">Состав</h4>
+        <h5 class="text-secondary">{{ pizza.structure }}</h5>
+        <h4 class="text-dark">Размер</h4>
+        <h5 class="text-secondary">{{ pizza.size }}см</h5>  
+      </div> 
+      <div class="col-12 col-md-6 mb-3">
+        <img 
+          class="img-fluid" 
+          height="640" width="480"
+          src="{{ pizza.image.url }}"
+          >  
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <h2><span class="badge bg-secondary">{{ pizza.price }} ₽</span></h2>
+        <a href="#" class="btn btn-primary">
+          <h2>
+            В корзину
+          </h2>
+        </a>
+      </div> 
+    </div>   
+  </div> 
 {% endblock %}

@@ -1,3 +1,4 @@
+import os
 from django.db import models
 
 
@@ -66,6 +67,24 @@ class Pizza(PublishedModel):
         related_name='pizza',
         verbose_name='Категория',
     )
+
+    image = models.ImageField('Фото', upload_to='pizza')
+
+    def save(self, *args, **kwargs):
+        try:
+            this_record = Pizza.objects.get(id=self.id)
+            if this_record.image != self.image:
+                if os.path.isfile(this_record.image.path):
+                    os.remove(this_record.image.path)
+        except Pizza.DoesNotExist:
+            pass
+
+        super(Pizza, self).save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        if self.image and os.path.isfile(self.image.path):
+            os.remove(self.image.path)
+        super(Pizza, self).delete(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Пицца'

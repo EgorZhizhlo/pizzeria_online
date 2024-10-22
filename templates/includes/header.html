@@ -2,55 +2,47 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
     <div class="container">
-      <div 
-        class="navbar-toggler" 
-        type="button" 
-        data-toggle="collapse" 
-        data-target="#navbarNav" 
-        aria-controls="navbarNav" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation"
-        >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </div>
+      </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         {% with request.resolver_match.view_name as view_name %}            
-        <ul class="nav nav-pills">
-          <li class="nav-item">              
-            <a
-              class="nav-link {% if view_name == 'homepage:home' %} active {% endif %}" 
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item pe-2">              
+            <h4><a
+              class="nav-link {% if view_name == 'homepage:home' %} active border border-info rounded-2 border-2 {% endif %}" 
               href="{% url 'homepage:home' %}"
               >
-              Главная 
-            </a> 
+              Главная
+            </a>
           </li>
           <li class="nav-item">
-            <a 
-              class="nav-link {% if view_name == 'pizza:pizza_list' %} active {% endif %}" 
-              href="{% url 'pizza:pizza_list' %}"
+            <h4><a 
+              class="nav-link {% if view_name == 'pizza:list' %} active border border-info rounded-2 border-2 {% endif %}" 
+              href="{% url 'pizza:list' %}"
               >
               Каталог
-            </a> 
+            </a>
           </li>
-          <li class="nav-item">
+          <h4><li class="nav-item">
             <a 
-              class="nav-link {% if view_name == 'about:about_pizzeria' %} active {% endif %}"
+              class="nav-link {% if view_name == 'about:about_pizzeria' %} active border border-info rounded-2 border-2 {% endif %}"
               href="{% url 'about:about_pizzeria' %}"
             >
-              О пиццериях
+            О пиццериях
             </a> 
           </li>
         </ul>
         {% endwith %}
       </div> 
 
-      <form class="d-flex me-4" method="GET" action="{% url 'pizza:pizza_list' %}">
+      <form class="d-flex me-4" method="GET" action="{% url 'pizza:list' %}">
         <input class="form-control me-2" type="search" name="search" placeholder="Поиск" aria-label="Search">
         <button class="btn btn-outline-primary" type="submit">Поиск</button>
       </form>
 
-      <a class="navbar-brand" href="" data-toggle="modal" data-target="#UserAccountModal">
+      <a class="navbar-brand" href="" data-bs-toggle="modal" data-bs-target="#UserAccountModal">
         <img src="{% static 'img/user/user-login.png' %}" height="50" class="d-inline-block align-top" alt="">           
       </a>  
 
